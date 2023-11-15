@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="explorePage.css" rel="stylesheet">
+    <link href="../layout/layout.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Georgia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+        <div class="company-logo">
+            <img src="../images/hiClass_logo.svg" alt="">
+        </div>
+        <div class="menu">
+            <div class="menu-text">Discover</div>
+            <div class="menu-text"><a class="profile-link" href="../createClass/emptyProfile.html">My profile</a></div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="tertiary-button"><img src="../images/tertiary-button.svg" alt=""></div>
+        <div class="profile">
+            <div class="avatar"><img
+                    src="../images/avatar40x40_Online.svg"
+                    alt=""></div>
+            <div class="chevron-down"><img src="../images/chevron-down.svg" alt=""></div>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="top-section">
+        <div class="title-and-subtitle">
+            <div class="copy">
+                <div>Hi <span class="first-name-output"></span>,</div>
+                <div>Find influencers to skyrocket sales for your promo campaign</div>
+                <div class="explore">Explore 10,000+ unique influencers</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="filters">
+        <div class="main-filters">
+            <div class="dropdown" id="subject-dropdown">
+                <div class="select-btn" id="select-subjects">
+                    <span class="btn-text" id="output-subjects">Subject</span>
+                    <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                </div>
+                <ul class="list-items" id="list-subjects">
+
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select-btn" id="select-grades">
+                    <span class="btn-text" id="output-grades">Grade</span>
+                    <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                </div>
+                <ul class="list-items" id="list-grades">
+
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select-btn" id="select-location">
+                    <span class="btn-text" id="output-location">Location</span>
+                    <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                </div>
+                <ul class="list-items" id="list-location">
+
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select-btn" id="select-languages">
+                    <span class="btn-text" id="output-languages">Language</span>
+                    <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                </div>
+                <ul class="list-items" id="list-languages">
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="show-specialists">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <div class="available">Show-specialists</div>
+        </div>
+
+    </div>
+    <div class="selected-values">
+
+    </div>
+    <button onclick="defaultSearchRequest()">Default search request</button>
+    <div class="section"">
+        <div class="top-line">
+            <div class="top-line-title">Most popular classes in Geography</div>
+            <button class="top-line-btn">See all<img src="../images/top-line-btn.svg" alt=""></button>
+        </div>
+        <div class="line">
+            <div class="class-preview">
+                <div class="class-preview-content">
+                    <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
+                    <div class="personal-info">
+                        <div class="avatar-explorePage"><img src="../images/avatar.svg" alt=""></div>
+                        <div class="username">Elizaveta Ermakova</div>
+                    </div>
+                    <div class="class-preview-text">Lorem ipsum dolor sit amet consectetur. Dictumst faucibus ac sit
+                        amet
+                    </div>
+                    <div class="class-preview-footer">
+                        <div class="class-preview-tags">
+                            <div class="class-preview-tag">Geography</div>
+                            <div class="class-preview-tag">10th grade</div>
+                            <div class="class-preview-tag">Math</div>
+                            <div class="class-preview-tag">10th grade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="class-preview">
+                <div class="class-preview-content">
+                    <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
+                    <div class="personal-info">
+                        <div class="avatar-explorePage"><img src="../images/avatar.svg" alt=""></div>
+                        <div class="username">Elizaveta Ermakova</div>
+                    </div>
+                    <div class="class-preview-text">Lorem ipsum dolor sit amet consectetur. Dictumst faucibus ac sit
+                        amet
+                    </div>
+                    <div class="class-preview-footer">
+                        <div class="class-preview-tags">
+                            <div class="class-preview-tag">Geography</div>
+                            <div class="class-preview-tag">10th grade</div>
+                            <div class="class-preview-tag">Math</div>
+                            <div class="class-preview-tag">10th grade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="top-line">
+            <div class="top-line-title">Most popular classes in Geography</div>
+            <button class="top-line-btn">See all<img src="../images/top-line-btn.svg" alt=""></button>
+        </div>
+        <div class="line">
+            <div class="class-preview">
+                <div class="class-preview-content">
+                    <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
+                    <div class="personal-info">
+                        <div class="avatar-explorePage"><img src="../images/avatar.svg" alt=""></div>
+                        <div class="username">Elizaveta Ermakova</div>
+                    </div>
+                    <div class="class-preview-text">Lorem ipsum dolor sit amet consectetur. Dictumst faucibus ac sit
+                        amet
+                    </div>
+                    <div class="class-preview-footer">
+                        <div class="class-preview-tags">
+                            <div class="class-preview-tag">Geography</div>
+                            <div class="class-preview-tag">10th grade</div>
+                            <div class="class-preview-tag">Math</div>
+                            <div class="class-preview-tag">10th grade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="class-preview">
+                <div class="class-preview-content">
+                    <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
+                    <div class="personal-info">
+                        <div class="avatar-explorePage"><img src="../images/avatar.svg" alt=""></div>
+                        <div class="username">Elizaveta Ermakova</div>
+                    </div>
+                    <div class="class-preview-text">Lorem ipsum dolor sit amet consectetur. Dictumst faucibus ac sit
+                        amet
+                    </div>
+                    <div class="class-preview-footer">
+                        <div class="class-preview-tags">
+                            <div class="class-preview-tag">Geography</div>
+                            <div class="class-preview-tag">10th grade</div>
+                            <div class="class-preview-tag">Math</div>
+                            <div class="class-preview-tag">10th grade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script>document.getElementById('davaToday').valueAsDate = new Date();</script>
+</body>
+
+<script src="../createAccount/dataLessons.js"></script>
+<script src="../createAccount/dataGrades.js"></script>
+<script src="../createAccount/dataLanguages.js"></script>
+<script src="explorePage.js"></script>
+<script src="../createAccount/institution.js"></script>
+<script src="../createAccount/userStatus.js"></script>
+<script src="../inviteForCall/viewClass.js"></script>
+<script src="../inviteForCall/inviteClass.js"></script>
+<script src="../inviteForCall/postInviteClass.js"></script>
+<script src="getUserProfile.js"></script>
+<script src="defaultSearch.js"></script>
+</html>

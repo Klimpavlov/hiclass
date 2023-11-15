@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="settingsProfile.css" rel="stylesheet">
+    <link href="../layout/layout.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Georgia' rel='stylesheet'>
+</head>
+<body>
+<div class="header">
+    <div class="header-left">
+        <div class="company-logo">
+            <img src="../images/hiClass_logo.svg" alt="">
+        </div>
+        <div class="menu">
+            <div class="menu-text">Discover</div>
+            <div class="menu-text">My profile</div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="tertiary-button"><img src="../images/tertiary-button.svg" alt=""></div>
+        <div class="profile">
+            <div class="avatar"><img
+                    src="../images/avatar40x40_Online.svg"
+                    alt=""></div>
+            <div class="chevron-down"><img src="../images/chevron-down.svg" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="back-btn">
+        <div><img src="../images/arrow-left-circle.svg" alt=""></div>
+        <div class="back">Back</div>
+    </div>
+    <div class="settings">Settings</div>
+    <div class="settings-filters">
+        <div class="filter profile-info active">Profile info
+            <div class="filter-underline"></div>
+        </div>
+        <div class="filter profile-login">Login & Security
+            <div class="filter-underline"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="profile-photo">
+            <div class="profile-photo-title">Profile photo</div>
+            <div class="profile-photo-text">
+                <div>Your photo appears on your Profile page and is visible for Brands on your profile preview</div>
+                <div>Recommended size: Square, at least 1000 pixels per side. File type: JPG, PNG or GIF.</div>
+            </div>
+            <div class="profile-photo-avatar">
+                <div></div>
+                <div class="change-photo">Change photo</div>
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="position-verification-title">About me</div>
+            <div class="position-verification-text">
+                <span>Add a brief description for your profile</span>
+            </div>
+            <div class="first-name">
+                <div class="input-title">First name</div>
+                <div class="">
+                    <label><input name="first-name" class="first-name-input" type="text"
+                                id="editFirstName"  placeholder="Enter your first name"></label>
+                </div>
+                <div class="first-name-edit"></div>
+            </div>
+            <div class="last-name">
+                <div class="input-title">Last name</div>
+                <div class="">
+                    <label><input name="last-name" class="last-name-input" type="text"
+                                 id="editLastName" placeholder="Enter your last name"></label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="input-title">I’m a/an</div>
+                <div class="select-btn">
+                    <span class="btn-text">Select..</span>
+                    <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                </div>
+                <ul class="list-items">
+
+                </ul>
+            </div>
+            <div class="location">
+                <div class="input-title">Location</div>
+                <div class="">
+                    <label><input name="last-name" class="last-name-input" type="text"
+                                 id="editLocation" placeholder=""></label>
+                </div>
+            </div>
+            <div class="description">
+                <div class="input-title">Description</div>
+                <div class="">
+                    <label><input name="institution-name" class="institution-name-input" type="text"
+                                id="description"  placeholder="Let others know you better.."></label>
+                </div>
+            </div>
+            <div class="update">
+                <button onclick="postEditPersonalInfo()" class="update-btn">Update</button>
+            </div>
+        </div>
+        <div class="position-verification">
+            <div class="position-verification-title">Position verification</div>
+            <div class="position-verification-text">
+                <span>For your security, we need you to verify your identity</span>
+            </div>
+            <div class="dropdown-input">
+                <div class="institution-name">
+                    <div class="input-title">Institution name</div>
+                    <div class="">
+                        <label><input name="institution-name" class="institution-name-input" type="text"
+                                      oninput="searchInstitution()" id="changeInstitution" placeholder="Enter your institution name"></label>
+                    </div>
+                    <ul class="institution-items">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="verify-update">
+                <button class="update-btn">Verify</button>
+                <button onclick="postChangeInstitution()" class="verify-btn">Update</button>
+            </div>
+        </div>
+        <div class="basic-info">
+            <div class="position-verification-title">Professional details</div>
+            <div class="position-verification-text">
+                <span>Lorem ipsum dolor sit amet consectetur. Euismod nunc cursus risus at egestas. Nec mi.</span>
+            </div>
+            <div class="dropdowns">
+                <div class="dropdown">
+                    <div class="input-title">Languages</div>
+                    <div class="select-btn" id="select-languages">
+                        <span class="btn-text" id="output-languages">Select..</span>
+                        <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                    </div>
+                    <ul class="list-items" id="list-languages">
+
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div class="input-title">Grades</div>
+                    <div class="select-btn" id="select-grades">
+                        <span class="btn-text" id="output-grades">Select..</span>
+                        <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                    </div>
+                    <ul class="list-items" id="list-grades">
+
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div class="input-title">Areas of work</div>
+                    <div class="select-btn" id="select-subjects">
+                        <span class="btn-text" id="output-subjects">Select..</span>
+                        <span class="arrow-dwn">
+        <img src="../images/chevron-down.svg" alt="">
+    </span>
+                    </div>
+                    <ul class="list-items" id="list-subjects">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="update">
+                <button onclick="postChangeProfessionalDetails()" class="update-btn">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../createAccount/dataLessons.js"></script>
+<script src="../createAccount/dataGrades.js"></script>
+<script src="../createAccount/dataLanguages.js"></script>
+<script src="../createAccount/institution.js"></script>
+<script src="settingsProfile.js"></script>
+<script src="postChangeEmail.js"></script>
+<script src="postEditPersonalInfo.js"></script>
+<script src="postChangeInstitution.js"></script>
+<script src="postChangeProfessionalDetails.js"></script>
+<script src="postResetPassword.js"></script>
+<script src="deleteAccount.js"></script>
+<script src="../explorePage/getUserProfile.js"></script>
+</html>
