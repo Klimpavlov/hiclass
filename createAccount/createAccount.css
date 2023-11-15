@@ -1,0 +1,319 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 68px 0 68px;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.company-logo {
+    height: 40px;
+}
+
+.header-right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.sign-out {
+    font-family: 'Inter', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.createAccount, .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.userStatus {
+
+}
+
+
+.content {
+    position: relative;
+    width: 384px
+}
+
+.title-and-subtle {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    color: #252E37;
+}
+
+.label-and-CTA {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+}
+
+.label {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+    width: 384px;
+    margin-top: 12px;
+}
+
+.CTA-button {
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #216C5E;
+    text-decoration: none;
+}
+
+.email, .password, .confirm-password {
+    margin-top: 16px;
+
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-title {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0C0F12;
+    margin-top: 16px;
+}
+
+.forget-password {
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #216C5E;
+    text-decoration: underline;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.first-name-input, .last-name-input {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B949D;
+    width: 384px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #D8DBDE;
+    margin-top: 8px;
+}
+
+.first-name-input:focus {
+    border-radius: 10px;
+    border: 1px solid #216C5E;
+    box-shadow: 0 0 0 4px #CBDFDC, 0 1px 2px 0 rgba(12, 15, 18, 0.05);
+}
+
+.last-name-input:focus {
+    border-radius: 10px;
+    border: 1px solid #216C5E;
+    box-shadow: 0 0 0 4px #CBDFDC, 0 1px 2px 0 rgba(12, 15, 18, 0.05);
+}
+
+.primary-button {
+    margin: 24px 0 0 0;
+    width: 384px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF;
+    line-height: 24px;
+    background-color: #216C5E;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.option {
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #D8DBDE;
+    box-shadow: 0 1px 2px 0 rgba(12, 15, 18, 0.05);
+    margin-bottom: 16px;
+}
+
+.option-value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-name {
+    font-family: 'Inter', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+input[type='radio'] {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D8DBDE;
+    background: #FFF;
+    box-shadow: 0 1px 2px 0 rgba(12, 15, 18, 0.05);
+}
+
+input[type='radio']::before {
+
+}
+
+input[type='radio']:checked::after {
+
+}
+
+.option-text {
+    font-family: 'Inter', serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #3E4C5B;
+    width: 312px;
+    margin-top: 12px;
+}
+
+.content-body {
+    width: 384px;
+}
+
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+}
+
+.select-btn:focus {
+    border-radius: 10px;
+    border: 1px solid #216C5E;
+    box-shadow: 0 0 0 4px #CBDFDC, 0 1px 2px 0 rgba(12, 15, 18, 0.05);
+}
+
+.select-btn .arrow-dwn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.institution-items {
+    display: none;
+    /* Other existing styles */
+    cursor: pointer;
+}
+
+.list-items, .grades-items, .institution-items {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow-y: auto;
+    max-height: 296px;
+}
+
+.select-btn.open ~ .list-items, .grades-items {
+    display: block;
+}
+
+
+.list-items.item, .grades-items.item, .institution-items.item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.list-items .item:hover {
+    background-color: ghostwhite;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 0 0;
+}
+
+.item-text {
+    font-family: 'Inter', serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.item.checked .checkbox {
+    background-color: #216C5E;
+    border-color: #216C5E;
+}
+
+.checkbox .check-icon {
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.item.checked .check-icon {
+    transform: scale(1);
+}
+
+
+
+

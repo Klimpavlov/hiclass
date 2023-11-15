@@ -1,0 +1,258 @@
+.banner {
+    position: relative;
+    height: 240px;
+    background-color: #F7F8F8;
+}
+
+.user {
+    width: 384px;
+    position: relative;
+    left: 5%;
+    top: -75px;
+}
+
+.user-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 0 0 24px 0;
+}
+
+.top {
+    padding: 0 0 32px 0;
+}
+
+.username {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    color: #232323;
+}
+
+.rating {
+    display: flex;
+    gap: 4px;
+    margin: 16px 0 0 0;
+}
+
+.mark {
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0C0F12;
+}
+
+.reviews {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3E4C5B;
+}
+
+.languages, .language, .user-info, .location, .time {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+    margin: 16px 0 0 0;
+}
+
+.show-more {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #216C5E;
+
+}
+
+.local-time {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+    margin-left: 8px;
+}
+
+.gmt {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3E4C5B;
+    margin-left: 8px;
+}
+
+.secondary-button {
+    width: 100%;
+    padding: 12px 20px 12px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #b2b7bd;
+    border-radius: 10px;
+    margin: 24px 0 0 0;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+}
+
+
+
+.section {
+
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.position {
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #0C0F12;
+}
+
+.verify {
+    width: 46px;
+    height: 24px;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #216C5E;
+}
+
+.status {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+    margin-top: 16px;
+}
+
+.location, .status, .time {
+    display: flex;
+}
+
+.location-text, .status-text {
+    margin-left: 8px;
+}
+
+.tags {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns:repeat(3, 1fr);
+    margin-top: 16px;
+}
+
+.tag {
+    width: 116px;
+    height: 36px;
+    border-radius: 100px;
+    background-color: #ECEDEF;
+    text-align: center;
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: #0C0F12;
+}
+
+.main {
+    width: 696px;
+    position: relative;
+    top: 55px;
+    right: 5%;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 32px 0;
+}
+
+.classes {
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #232323;
+}
+
+.add-class {
+    display: flex;
+    gap: 8px;
+}
+
+.plus, .add-class-text {
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #216C5E;
+}
+
+.current-classes {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns:repeat(2, 1fr);
+}
+
+.class-preview {
+    width: 332px;
+}
+
+.class-preview-image {
+
+    height: 168px;
+    border-radius: 10px;
+}
+
+.class-preview-text {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C0F12;
+    margin-top: 12px;
+}
+
+.class-preview-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.class-preview-tags {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns:repeat(3, 1fr);
+}
+
+.class-preview-tag {
+    padding: 4px 10px;
+    border-radius: 100px;
+    background-color: #ECEDEF;
+    text-align: center;
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #0C0F12;
+}
+
+.user-and-main {
+    display: flex;
+    justify-content: space-between;
+}
