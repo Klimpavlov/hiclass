@@ -12,7 +12,6 @@ filters.forEach(filter => {
     });
 });
 
-
 /* dropdowns professional details */
 
 
@@ -240,6 +239,127 @@ async function searchInstitution() {
 
     renderInstitution(items)
 }
+
+
+
+// get countries
+
+var countriesData = []; // Local variable to store the countries data
+var citiesData = []; // Local variable to store the cities data
+
+function getCountries() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "https://countriesnow.space/api/v0.1/countries", true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            countriesData = response.data.map(function (item) {
+                return item.country;
+            });
+            console.log(countriesData); // Output countries data in the console
+        } else if (xhr.readyState === 4) {
+            console.error("Error: " + xhr.status);
+        }
+    };
+
+    xhr.send();
+}
+
+function filterCountries() {
+    var countryInput = document.getElementById("countryInput").value.toLowerCase();
+    var filteredCountries = countriesData.filter(function (country) {
+        return country.toLowerCase().startsWith(countryInput);
+    });
+
+    var dropdown = document.getElementById("countryDropdown");
+    dropdown.innerHTML = "";
+
+    filteredCountries.forEach(function (country) {
+        var option = document.createElement("div");
+        option.className = "dropdown-list-item";
+        option.textContent = country;
+        option.addEventListener("click", function () {
+            document.getElementById("countryInput").value = country;
+            dropdown.style.display = "none";
+            getCities();
+        });
+        dropdown.appendChild(option);
+    });
+
+    if (filteredCountries.length > 0) {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+
+function getCities() {
+    var countryName = document.getElementById("countryInput").value;
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "https://countriesnow.space/api/v0.1/countries/cities", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            citiesData = response.data;
+            console.log(citiesData); // Output cities data in the console
+        } else if (xhr.readyState === 4) {
+            console.error("Error: " + xhr.status);
+        }
+    };
+
+    var requestBody = JSON.stringify({ country: countryName });
+    xhr.send(requestBody);
+}
+
+function filterCities() {
+    var cityInput = document.getElementById("cityInput").value.toLowerCase();
+    var filteredCities = citiesData.filter(function (city) {
+        return city.toLowerCase().startsWith(cityInput);
+    });
+
+    var dropdown = document.getElementById("cityDropdown");
+    dropdown.innerHTML = "";
+
+    filteredCities.forEach(function (city) {
+        var option = document.createElement("div");
+        option.className = "dropdown-list-item";
+        option.textContent = city;
+        option.addEventListener("click", function () {
+            document.getElementById("cityInput").value = city;
+            dropdown.style.display = "none";
+        });
+        dropdown.appendChild(option);
+    });
+
+    if (filteredCities.length > 0) {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+function showCityDropdown() {
+    var dropdown = document.getElementById("cityDropdown");
+    if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+
+// Загрузка списка стран при загрузке страницы
+window.addEventListener("DOMContentLoaded", function () {
+    getCountries();
+});
+
+// const inputValueCountry = document.querySelector('#countryInput').value;
+// localStorage.setItem('locationCountry', inputValueCountry);
+// const inputValueCity = document.querySelector('#cityInput').value;
+// localStorage.setItem('locationCity', inputValueCity);
 
 
 

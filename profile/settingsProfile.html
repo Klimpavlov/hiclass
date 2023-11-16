@@ -63,7 +63,7 @@
             <div class="first-name">
                 <div class="input-title">First name</div>
                 <div class="">
-                    <label><input name="first-name" class="first-name-input" type="text"
+                    <label><input name="first-name" class="first-name-input edit-name" type="text"
                                 id="editFirstName"  placeholder="Enter your first name"></label>
                 </div>
                 <div class="first-name-edit"></div>
@@ -88,10 +88,25 @@
                 </ul>
             </div>
             <div class="location">
-                <div class="input-title">Location</div>
-                <div class="">
-                    <label><input name="last-name" class="last-name-input" type="text"
-                                 id="editLocation" placeholder=""></label>
+                <div class="first-name">
+                    <div class="dropdown">
+                        <div class="input-title">Country</div>
+                        <div class="" >
+                            <input type="text" id="countryInput" class="first-name-input" oninput="filterCountries()" placeholder="Country">
+                        </div>
+                        <ul class="list-items" id="countryDropdown">
+
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="input-title">City</div>
+                        <div class="" >
+                            <input type="text" id="cityInput" class="first-name-input" oninput="filterCities()" placeholder="Cities">
+                        </div>
+                        <ul class="list-items" id="cityDropdown">
+
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="description">

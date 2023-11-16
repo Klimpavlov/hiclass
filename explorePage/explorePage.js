@@ -231,7 +231,14 @@ const dropdowns = [
         itemsContainer: document.querySelector('#list-languages'),
         filterValues: [],
         items: ALL_LANGUAGES
-    }
+    },
+    // {
+    //     btnFilter: document.querySelector('#select-location'),
+    //     itemsContainer: document.querySelector('#list-location'),
+    //     filterValues: [],
+    //     items:[]
+    // }
+
 ];
 
 const filterValuesDiv = document.querySelector('.selected-values'); // Общий элемент для всех выбранных значений

@@ -1,19 +1,23 @@
 async function postEditPersonalInfo() {
     const url = 'http://localhost:7280/api/edituser/personal-info';
-    let updatedLocation =document.querySelector('#editLocation').value;
     const currentFirstName = document.querySelector('#editFirstName').value;
     const currentLastName = document.querySelector('#editLastName').value;
     const currentDescription = document.querySelector('#description').value;
+
+    // if (!currentFirstName || !currentLastName || !updatedLocation || !currentDescription) {
+    //     alert('Пожалуйста, заполните все поля.');
+    //     return; // Останавливаем выполнение функции, чтобы запрос не отправлялся
+    // }
 
     // Обновляем только измененные значения
     const data = {
         IsATeacher: true,
         IsAnExpert: false,
-        FirstName: currentFirstName !== '' ? currentFirstName : undefined,
-        LastName: currentLastName !== '' ? currentLastName : undefined,
-        CityTitle: updatedLocation.split(' ')[0],
-        CountryTitle: updatedLocation.split(' ')[1],
-        Description: currentDescription !== '' ? currentDescription : undefined,
+        FirstName: currentFirstName,
+        LastName: currentLastName,
+        CityTitle: document.querySelector("#cityInput").value,
+        CountryTitle: document.querySelector("#countryInput").value,
+        Description: currentDescription,
     };
 
 
@@ -27,7 +31,7 @@ async function postEditPersonalInfo() {
             'Transfer-Encoding': 'chunked',
             'Data': new Date().toLocaleString(),
             'Server': "localhost",
-            'Authorization':`Bearer ${localStorage.getItem('accessToken')}`
+            'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         },
         body: JSON.stringify(data)
     })

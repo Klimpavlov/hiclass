@@ -85,11 +85,6 @@ addClassBtn.addEventListener('click', () => {
 
     `
 
-    const inputValueClassTitle = document.querySelector('#class-title').value;
-
-    localStorage.setItem('classTitle', inputValueClassTitle);
-
-
     let cancelButton = document.querySelector('.cancel-btn');
     cancelButton.addEventListener('click', () => {
         closeModal();
@@ -285,6 +280,9 @@ addClassBtn.addEventListener('click', () => {
 
 
     function createClass() {
+
+        const inputValueClassTitle = document.querySelector('#class-title').value;
+        localStorage.setItem('classTitle', inputValueClassTitle);
 
         const classBlock = document.createElement('div');
         classBlock.classList.add('class-block');

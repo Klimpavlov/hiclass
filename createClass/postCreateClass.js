@@ -2,18 +2,14 @@
 
 async function postCreateClass() {
     const url = 'http://localhost:7280/api/class/create-class';
-    // const disciplines = localStorage.getItem('disciplines').split(',');
+    const disciplines = localStorage.getItem('disciplines').split(',');
     const grades = localStorage.getItem('grades').split(',').map(str => parseInt(str)).toString();
     const data = {
-        // Title: localStorage.getItem('classTitle'),
-        Title: "hiClass",
+        Title: localStorage.getItem('classTitle'),
         GradeNumber: grades,
         PhotoUrl: "photoUrl",
-        LanguageTitles:  [
-            // localStorage.getItem('languages')
-            "English"
-        ],
-        DisciplineTitles: ["Geography"]
+        LanguageTitles: localStorage.getItem('languages').split(','),
+        DisciplineTitles: disciplines,
     };
 
     console.log(JSON.stringify(data));
