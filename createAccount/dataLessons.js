@@ -1,19 +1,19 @@
 const ALL_LESSONS = [
     {
         id: 1,
-        title: 'Project activities',
+        title: 'Project activity',
     },
     {
         id: 2,
-        title: 'Russian',
+        title: 'Russian language',
     },
     {
         id: 3,
-        title: 'Literature',
+        title: 'Russian literature',
     },
     {
         id: 4,
-        title: 'Math',
+        title: 'Maths',
     },
     {
         id: 5,
@@ -21,15 +21,15 @@ const ALL_LESSONS = [
     },
     {
         id: 6,
-        title: 'English',
+        title: 'English as a foreign language',
     },
     {
         id: 7,
-        title: 'French',
+        title: 'French as a foreign language',
     },
     {
         id: 8,
-        title: 'German',
+        title: 'German as a foreign language',
     },
     {
         id: 9,
@@ -45,46 +45,70 @@ const ALL_LESSONS = [
     },
     {
         id: 12,
-        title: 'Social studies',
-    },
-    {
-        id: 13,
         title: 'Geography',
     },
     {
+        id: 13,
+        title: 'ICT',
+    },
+    {
         id: 14,
-        title: 'Computer science',
+        title: 'World arts',
     },
     {
         id: 15,
-        title: 'World art',
+        title: 'Fine arts',
     },
     {
         id: 16,
-        title: 'Visual art',
-    },
-    {
-        id: 17,
         title: 'Technology',
     },
     {
-        id: 18,
-        title: 'Natural science',
+        id: 17,
+        title: 'Science',
     },
     {
-        id: 19,
+        id: 18,
         title: 'Music',
     },
     {
-        id: 20,
-        title: 'Economy',
+        id: 19,
+        title: 'Economics',
     },
     {
-        id: 21,
+        id: 20,
         title: 'Rhetoric',
     },
     {
+        id: 21,
+        title: 'Regional studies',
+    },
+    {
         id: 22,
-        title: 'Local history',
-    }
+        title: 'Astronomy',
+    },
+    {
+        id: 23,
+        title: 'Crafts',
+    },
+    {
+        id: 24,
+        title: 'Cultural exchange',
+    },
+    {
+        id: 25,
+        title: 'Vocational education',
+    },
+    {
+        id: 26,
+        title: 'Italian as a foreign language',
+    },
+    {
+        id: 27,
+        title: 'Spanish as a foreign language',
+    },
+    {
+        id: 28,
+        title: 'Chinese as a foreign language',
+    },
 ]

@@ -25,7 +25,7 @@ async function getCountryLocation() {
 
         const countriesBtnFilter = document.querySelector('#select-location');
         const countriesFilterValues = [];
-        const countriesFilterValuesDiv = document.querySelector(".selected-values");
+        const countriesFilterValuesDiv = document.querySelector(".selected-countries");
 
         countriesBtnFilter.addEventListener("click", () => {
             countriesBtnFilter.classList.toggle("open");
@@ -77,25 +77,41 @@ async function getCountryLocation() {
             const dropdownButtons = document.createElement('div');
             dropdownButtons.classList.add('dropdown-buttons');
             dropdownButtons.innerHTML = `
-    <button class="clearButton">Clear All</button>
-    <button class="applyButton">Apply</button>
+    <button class="clearButton" id="location-clear">Clear All</button>
+    <button class="applyButton" id="location-apply">Apply</button>
   `;
             location.appendChild(dropdownButtons);
 
         }
 
-        // const applyButton = document.querySelector(".applyButton");
-        // applyButton.addEventListener("click", () => {
-        //     console.log('apply')
-        //     const selectedTags = countriesFilterValues.map(value => `<div class="tag">${value}</div>`).join("");
-        //     countriesFilterValuesDiv.innerHTML = selectedTags;
-        // });
-        //
-        //
-        // const clearButton = document.querySelector('.clearButton');
-        // clearButton.addEventListener("click", () => {
-        //     countriesFilterValuesDiv.innerHTML = "";
-        // })
+        const applyButton = document.querySelector("#location-apply");
+        applyButton.addEventListener("click", () => {
+            console.log('apply')
+            const selectedTags = countriesFilterValues.map(value =>
+                `<div class="tag">${value}
+                 <span class="delete-tag" id="deleteCountry">&times;</span></div>`).join("");
+            countriesFilterValuesDiv.innerHTML = selectedTags;
+            const tagCloseButtons = document.querySelectorAll("#deleteCountry");
+            tagCloseButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const tag = button.parentNode;
+                    const tagText = tag.textContent.trim();
+                    const index = countriesFilterValues.indexOf(tagText);
+                    if (index !== -1) {
+                        countriesFilterValues.splice(index, 1);
+                    }
+                    tag.remove();
+                });
+            });
+        });
+
+
+        const clearButton = document.querySelector('#location-clear');
+        clearButton.addEventListener("click", () => {
+            countriesFilterValuesDiv.innerHTML = "";
+        })
+
+
 
     } else {
         throw new Error('Произошла ошибка при выполнении запроса.');

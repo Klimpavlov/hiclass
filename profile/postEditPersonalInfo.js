@@ -3,16 +3,17 @@ async function postEditPersonalInfo() {
     const currentFirstName = document.querySelector('#editFirstName').value;
     const currentLastName = document.querySelector('#editLastName').value;
     const currentDescription = document.querySelector('#description').value;
-
-    // if (!currentFirstName || !currentLastName || !updatedLocation || !currentDescription) {
-    //     alert('Пожалуйста, заполните все поля.');
-    //     return; // Останавливаем выполнение функции, чтобы запрос не отправлялся
-    // }
+    let editExpertValue = localStorage.getItem('editExpert')
+    let editTeacherValue = localStorage.getItem('editTeacher')
+    if (!currentFirstName || !currentLastName || !updatedLocation || !currentDescription) {
+        alert('Пожалуйста, заполните все поля.');
+        return; // Останавливаем выполнение функции, чтобы запрос не отправлялся
+    }
 
     // Обновляем только измененные значения
     const data = {
-        IsATeacher: true,
-        IsAnExpert: false,
+        IsATeacher: JSON.parse(editTeacherValue),
+        IsAnExpert: JSON.parse(editExpertValue),
         FirstName: currentFirstName,
         LastName: currentLastName,
         CityTitle: document.querySelector("#cityInput").value,

@@ -14,6 +14,22 @@ filters.forEach(filter => {
 
 /* dropdowns professional details */
 
+const editInputValueTeacher = document.querySelector('#editTeacherValue').checked;
+const editInputValueExpert = document.querySelector('#editExpertValue').checked;
+if (editInputValueTeacher === true) {
+    localStorage.setItem('editTeacher', true);
+}
+if(editInputValueTeacher === false) {
+    localStorage.setItem('editTeacher', false);
+}
+
+if (editInputValueExpert === true) {
+    localStorage.setItem('editExpert', true);
+}
+if(editInputValueExpert === false) {
+    localStorage.setItem('editExpert', false);
+}
+
 
 const selectBtn = document.querySelector('#select-subjects');
 const selectedValues = [];
