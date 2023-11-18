@@ -63,5 +63,5 @@ const ALL_GRADES = [
         id: 13,
         age: '17-18',
         classNum: 12,
-    },
+    }
 ]

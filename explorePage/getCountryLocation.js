@@ -32,6 +32,7 @@ async function getCountryLocation() {
         });
 
 
+
         const location = document.querySelector('#list-location');
 
         let filterFn = (lesson) => true;
@@ -86,7 +87,7 @@ async function getCountryLocation() {
 
         const applyButton = document.querySelector("#location-apply");
         applyButton.addEventListener("click", () => {
-            console.log('apply')
+            console.log('')
             const selectedTags = countriesFilterValues.map(value =>
                 `<div class="tag">${value}
                  <span class="delete-tag" id="deleteCountry">&times;</span></div>`).join("");
@@ -103,6 +104,8 @@ async function getCountryLocation() {
                     tag.remove();
                 });
             });
+            localStorage.setItem('countriesValues', countriesFilterValues)
+            searchRequest();
         });
 
 
