@@ -32,5 +32,6 @@ function resetPassword() {
         let changePasswordButton = document.getElementById('change-password-btn');
         changePasswordButton.addEventListener('click', ()=> {
             postResetPassword();
+            // window.location.href = "../../registration/signIn/signIn.html";
         })
 }

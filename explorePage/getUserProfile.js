@@ -89,7 +89,6 @@ async function getUserProfile() {
             subjectsOutput.appendChild(tagElement);
         });
 
-        console.log(...`${responseData.value.classeDtos[0].title}`)
 
         // User classes
 

@@ -104,12 +104,12 @@
         <span class="selected-languages"></span></div>
 
     <div class="request-output-container" id="requestOutput"></div>
-    <div class="section">
-        <div class="top-line">
-            <div class="top-line-title">Most popular classes in Geography</div>
-            <button class="top-line-btn">See all<img src="../images/top-line-btn.svg" alt=""></button>
-        </div>
-        <div class="line" id="getClassByGeography">
+<!--    <div class="section">-->
+<!--        <div class="top-line">-->
+<!--            <div class="top-line-title">Most popular classes in Geography</div>-->
+<!--            <button class="top-line-btn">See all<img src="../images/top-line-btn.svg" alt=""></button>-->
+<!--        </div>-->
+<!--        <div class="line" id="getClassByGeography">-->
 <!--            <div class="class-preview">-->
 <!--                <div class="class-preview-content">-->
 <!--                    <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>-->
@@ -150,8 +150,24 @@
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="class-preview">
+        <div class="class-preview-content">
+            <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
+            <div class="personal-info">
+                <div class="avatar-explorePage"><img src="../images/avatar.svg" alt=""></div>
+                <div class="username">${userTeacher.userFullName}</div>
+            </div>
+            <div class="class-preview-text">${userTeacher.title}</div>
+            <div class="class-preview-footer">
+                <div class="class-preview-tags">
+                    ${userTeacher.disciplines}
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="section">
         <div class="top-line">
             <div class="top-line-title">Most popular classes in your country</div>
@@ -208,6 +224,8 @@
 <script src="../createAccount/dataLessons.js"></script>
 <script src="../createAccount/dataGrades.js"></script>
 <script src="../createAccount/dataLanguages.js"></script>
+<script src="defaultSearch.js"></script>
+<script src="searchByFilters.js"></script>
 <script src="getCountryLocation.js"></script>
 <script src="getUserProfile.js"></script>
 <script src="explorePage.js"></script>
@@ -216,6 +234,5 @@
 <script src="../inviteForCall/viewClass.js"></script>
 <script src="../inviteForCall/inviteClass.js"></script>
 <script src="../inviteForCall/postInviteClass.js"></script>
-<script src="defaultSearch.js"></script>
-<script src="searchByFilters.js"></script>
+
 </html>

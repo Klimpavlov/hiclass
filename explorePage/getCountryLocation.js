@@ -1,5 +1,5 @@
 async function getCountryLocation() {
-    const url = 'http://localhost:7280/api/Location/all-country-locations';
+    const url = 'http://localhost:7280/api/search/all-country-locations';
 
     const response = await fetch(url, {
         method: 'GET',

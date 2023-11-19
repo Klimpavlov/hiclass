@@ -19,6 +19,7 @@ async function fetchData() {
     } else {
         throw new Error('Произошла ошибка при выполнении запроса.');
     }
+
     const editFirstNameElement = document.getElementById('editFirstName');
     const editLastNameElement = document.getElementById('editLastName');
     const editTeacherValueElement = document.getElementById('editTeacherValue');

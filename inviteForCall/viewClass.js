@@ -3,6 +3,7 @@ const classPreviews = document.querySelectorAll('.class-preview');
 
 // Добавляем слушатель события клика на каждый элемент "class-preview"
 classPreviews.forEach((classPreview) => {
+
     classPreview.addEventListener('click', () => {
 
         // Проверяем, содержит ли блок "class-preview" класс "expanded"
