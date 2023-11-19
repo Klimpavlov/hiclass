@@ -1,11 +1,11 @@
-async function postForgotPassword() {
-    const url = 'http://localhost:7280/api/user/forgot-password';
+async function postCheckCodeFromEmail() {
+    const url = 'http://localhost:7280/api/user/check-reset-password-code';
 
     // const data = {
     //     Email: document.getElementById("current-email").value,
     // };
 
-    const queryUrl = `${url}?email=${document.getElementById("current-email").value}`;
+    const queryUrl = `${url}?code=${document.getElementById("resetCode").value}`;
 
     // console.log(JSON.stringify(data));
 

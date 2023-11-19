@@ -1,4 +1,5 @@
 function checkEmail() {
+
     let checkEmail = document.createElement('div');
     document.body.append(checkEmail)
     checkEmail.innerHTML = `
@@ -13,16 +14,22 @@ function checkEmail() {
         <div class="inputs">
             <div class="first-name">
                 <div class="">
-                    <label><input class="first-name-input" id="verificationCode" type="text"
+                    <label><input class="first-name-input" id="resetCode" type="text"
                                   placeholder="Enter your code from email"></label>
                 </div>
             </div>
         </div>
-        <button onclick="resetPassword()" class="primary-button">Continue</button>
+        <button class="primary-button" id="check-email-btn">Continue</button>
     </div>
     `
 
     document.querySelector('.dialog').replaceWith(checkEmail);
+
+    let checkEmailContinueBtn = document.querySelector('#check-email-btn');
+    checkEmailContinueBtn.addEventListener('click', function() {
+        postCheckCodeFromEmail()
+        resetPassword()
+    })
 
     // checkEmail.addEventListener('click', function (event) {
     //     if (event.target.classList.contains('primary-button')) {

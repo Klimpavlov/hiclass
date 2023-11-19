@@ -86,16 +86,23 @@
       <div class="email">
         <div class="input-title">Email</div>
         <div class="">
-          <label><input name="email" class="email-input" type="text" placeholder="awesomeperson@email.com"></label>
+          <label><input name="email" class="email-input" id="current-email" type="text" placeholder="awesomeperson@email.com"></label>
         </div>
       </div>
       </div>
-       <button onclick="checkEmail()" class="primary-button">Continue</button>
+       <button  id="open-dialog-btn" class="primary-button">Continue</button>
        </div>
        </div>
   `;
 
     document.querySelector('.content').replaceWith(dialog);
+
+    let dialogContinueBtn = document.querySelector('#open-dialog-btn');
+        dialogContinueBtn.addEventListener('click', function() {
+            postForgotPassword()
+            checkEmail()
+        })
+
 
     }
 
@@ -104,4 +111,6 @@
 <script src="checkEmail.js"></script>
 <script src="resetPassword.js"></script>
 <script src="postForgotPassword.js"></script>
+<script src="postCheckCodeFromEmail.js"></script>
+<script src="postResetPassword.js"></script>
 </html>

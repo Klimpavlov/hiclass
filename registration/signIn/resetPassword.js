@@ -14,7 +14,7 @@ function resetPassword() {
       <div class="new-password">
         <div class="input-title">New password</div>
         <div class="">
-          <label><input name="email" class="email-input" type="text" placeholder="At least 6 characters"></label>
+          <label><input name="email" class="email-input" id="enterNewPassword" type="text" placeholder="At least 6 characters"></label>
         </div>
       </div>
       <div class="confirm-new-password">
@@ -25,9 +25,12 @@ function resetPassword() {
       </div>
       </div>
         <a href="../signIn/signIn.html" class="CTA-button">Change password</a>
+        <button class="primary-button" id="change-password-btn">Change password</button>
        </div>
        </div>
     `
-
-
+        let changePasswordButton = document.getElementById('change-password-btn');
+        changePasswordButton.addEventListener('click', ()=> {
+            postResetPassword();
+        })
 }
