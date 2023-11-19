@@ -9,21 +9,21 @@ function checkEmail() {
       <div class="label">We’ve sent an email to lisa@wonderworld.com. Please make sure:</div>
       </div>
   </div>
-  <div class="content-body">
-  <div class="points">
-      <div class="check-and-point">
-        <img src="../../images/check.svg" alt="">You’ve entered your email correctly
-      </div>
-      <div class="check-and-point">
-        <img src="../../images/check.svg" alt="">This email in linked to your profile
-      </div>
-      <div class="check-and-point">
-        <img src="../../images/check.svg" alt="">Check your spam and notifications folders in your Inbox
-      </div>
-       <button onclick="resetPassword()" class="primary-button">Sign in again</button>
-       </div>
-       </div>
+ <div class="content-body">
+        <div class="inputs">
+            <div class="first-name">
+                <div class="">
+                    <label><input class="first-name-input" id="verificationCode" type="text"
+                                  placeholder="Enter your code from email"></label>
+                </div>
+            </div>
+        </div>
+        <button onclick="resetPassword()" class="primary-button">Continue</button>
+    </div>
     `
+
+    document.querySelector('.dialog').replaceWith(checkEmail);
+
     // checkEmail.addEventListener('click', function (event) {
     //     if (event.target.classList.contains('primary-button')) {
     //         checkEmail.remove();

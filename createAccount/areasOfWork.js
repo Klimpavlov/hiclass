@@ -40,6 +40,7 @@ function chooseWork() {
 
     const lessons = document.querySelector('.list-items');
 
+
     let filterFn = (lesson) => true;
     generateItems(ALL_LESSONS);
 

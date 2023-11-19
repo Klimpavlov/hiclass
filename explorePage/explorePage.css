@@ -332,6 +332,19 @@
     color: #0C0F12;
 }
 
+
+/* request output*/
+
+
+.request-output-container {
+    padding: 0 112px 0 112px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display four columns */
+    grid-gap: 20px; /* Adjust the gap between the blocks */
+}
+
+
+
 /* Стили для раскрытого блока "class-preview" */
 .class-preview.expanded {
     position: fixed;

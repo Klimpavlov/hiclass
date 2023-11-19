@@ -17,13 +17,13 @@ function chooseGrades() {
     <div class="inputs">
       <div class="first-name">
         <div class="input-title">Grades</div>
-<div class="select-btn">
+<div class="select-btn" id="select-grades">
     <span class="btn-text-grades" id="grades">Select..</span>
     <span class="arrow-dwn">
         <img src="../images/chevron-down.svg" alt="">
     </span>
 </div>
-<ul class="grades-items">
+<ul class="list-items" id="list-grades">
     
 </ul>
         </div>
@@ -33,7 +33,7 @@ function chooseGrades() {
   </div>
     `
 
-    const selectBtn = document.querySelector('.select-btn');
+    const selectBtn = document.querySelector('#select-grades');
     const selectedValues = [];
     const selectedValuesDiv = document.querySelector(".btn-text-grades");
 
@@ -42,7 +42,8 @@ function chooseGrades() {
     });
 
 
-    const grades = document.querySelector('.grades-items');
+    const grades = document.querySelector('#list-grades');
+
 
     let filterFn = (grade) => true;
     generateItems(ALL_GRADES);

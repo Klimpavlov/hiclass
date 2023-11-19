@@ -106,6 +106,7 @@ async function getCountryLocation() {
             });
             localStorage.setItem('countriesValues', countriesFilterValues)
             searchRequest();
+            countriesBtnFilter.classList.remove("open");
         });
 
 

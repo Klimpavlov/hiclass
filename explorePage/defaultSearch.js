@@ -1,4 +1,6 @@
 async function defaultSearchRequest() {
+
+
     const url = 'http://localhost:7280/api/search/default-search-request';
 
 

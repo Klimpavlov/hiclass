@@ -418,8 +418,9 @@ applyButton.addEventListener("click", () => {
             tag.remove();
         });
     });
-    localStorage.setItem('subjectsValues', subjectFilterValues)
+    localStorage.setItem('subjectsValues', subjectFilterValues);
     searchRequest();
+    subjectBtnFilter.classList.remove("open");
 });
 
 
@@ -512,6 +513,8 @@ applyButtonGrades.addEventListener("click", () => {
     });
     localStorage.setItem('gradesValues', gradesFilterValues)
     searchRequest();
+    gradesBtnFilter.classList.remove("open");
+
 });
 
 
@@ -602,12 +605,15 @@ applyButtonLanguages.addEventListener("click", () => {
             tag.remove();
         });
     });
-    localStorage.setItem('languagesValues', languagesFilterValues)
+    localStorage.setItem('languagesValues', languagesFilterValues);
     searchRequest();
+    languagesBtnFilter.classList.remove("open");
+
 });
 
 
 const clearButtonLanguages = document.querySelector('#languages-clear');
 clearButtonLanguages.addEventListener("click", () => {
     languagesFilterValuesDiv.innerHTML = "";
+
 })

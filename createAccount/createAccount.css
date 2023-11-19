@@ -118,13 +118,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #8B949D;
+    color: #0C0F12;
     width: 384px;
     height: 48px;
     border-radius: 10px;
     border: 1px solid #D8DBDE;
     margin-top: 8px;
 }
+
 
 .first-name-input:focus {
     border-radius: 10px;
@@ -133,6 +134,7 @@
 }
 
 .last-name-input:focus {
+    color: #0C0F12;
     border-radius: 10px;
     border: 1px solid #216C5E;
     box-shadow: 0 0 0 4px #CBDFDC, 0 1px 2px 0 rgba(12, 15, 18, 0.05);

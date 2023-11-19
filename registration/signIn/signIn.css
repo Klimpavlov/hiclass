@@ -31,8 +31,13 @@
 }
 
 .content {
-    position: relative;
-    width: 384px
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
 }
 
 .title-and-subtle {
@@ -184,7 +189,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #8B949D;
+    color: black;
     width: 384px;
     height: 48px;
     border-radius: 10px;
@@ -218,22 +223,39 @@
     color: #3E4C5B;
 }
 
-.dialog {
+.dialog, .checkEmail {
     background-color: #FFFFFF;
     position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
 }
 
 .dialog.shown {
     display: block;
 }
 
-.checkEmail {
-    background-color: #FFFFFF;
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 100%;
+.first-name-input{
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    width: 384px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #D8DBDE;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.first-name-input:focus {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #216C5E;
+    box-shadow: 0 0 0 4px #CBDFDC, 0 1px 2px 0 rgba(12, 15, 18, 0.05);
 }
