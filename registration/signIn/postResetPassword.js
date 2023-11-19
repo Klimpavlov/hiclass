@@ -1,15 +1,13 @@
-async function postForgotPassword() {
-    const url = 'http://localhost:7280/api/user/forgot-password';
+async function postResetPassword() {
+    const url = 'http://localhost:7280/api/user/reset-password';
 
-    // const data = {
-    //     Email: document.getElementById("current-email").value,
-    // };
+    const data = {
+        Password: document.getElementById("enterNewPassword").value,
+    };
 
-    const queryUrl = `${url}?email=${document.getElementById("current-email").value}`;
+    console.log(JSON.stringify(data));
 
-    // console.log(JSON.stringify(data));
-
-    fetch(queryUrl, {
+    fetch(url, {
         method: 'POST',
         referrerPolicy: "origin-when-cross-origin",
         headers: {
@@ -19,7 +17,7 @@ async function postForgotPassword() {
             'Server': "localhost",
             'Authorization':`Bearer ${localStorage.getItem('accessToken')}`
         },
-        // body: JSON.stringify(data)
+        body: JSON.stringify(data)
     })
         .then(response => {
             if (response.ok) {

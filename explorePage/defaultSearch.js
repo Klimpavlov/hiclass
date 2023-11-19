@@ -59,11 +59,11 @@ async function defaultSearchRequest() {
         const getClass = document.querySelector("#getClassByGeography");
 
         responseData.classProfilesByDisciplines.forEach(userTeacher => {
-            const teacherPreview = document.createElement('div');
-            teacherPreview.className = 'class-preview';
+            const classPreview = document.createElement('div');
+            classPreview.className = 'class-preview';
 
 
-            teacherPreview.innerHTML = `
+            classPreview.innerHTML = `
     <div class="class-preview">
      <div class="class-preview-content">
                     <div class="class-preview-image"><img src="../images/class-preview-image.svg" alt=""></div>
@@ -80,7 +80,7 @@ async function defaultSearchRequest() {
                 </div>
     </div>
   `;
-            getClass.appendChild(teacherPreview);
+            getClass.appendChild(classPreview);
         });
 
     } else {

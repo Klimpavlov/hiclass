@@ -304,7 +304,7 @@ addClassBtn.addEventListener('click', () => {
             <div class="delete-class-btn">Delete</div>
           </div>
         </div>
-      </div>}
+      </div>
     </div>
     <div class="modal-delete-overlay">
       <div class="modal-delete-top">
