@@ -1,5 +1,3 @@
-
-
 const filters = document.querySelectorAll('.filter');
 
 filters.forEach(filter => {
@@ -13,8 +11,6 @@ filters.forEach(filter => {
         this.classList.add('active');
     });
 });
-
-
 
 /* dropdowns professional details */
 
@@ -81,7 +77,7 @@ function generateItems(items) {
                 }
             }
             selectedValuesDiv.innerHTML = selectedValues.map(value => `<span>${value}</span>`).join(", ");
-            console.log(selectedValues)
+
             localStorage.setItem('editedLessons', selectedValues)
         });
 
