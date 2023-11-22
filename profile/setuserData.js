@@ -1,6 +1,4 @@
-
-
-async function setUserProfileData() {
+async function fetchData() {
     const url = 'http://localhost:7280/api/user/get-userprofile';
 
     const response = await fetch(url, {
@@ -16,14 +14,8 @@ async function setUserProfileData() {
     });
 
     if (response.ok) {
-        const responseData = response.json();
-
-        responseData.then(value =>
-            localStorage.setItem('userProfile', JSON.stringify(value.value)));
-
-        console.log(localStorage.getItem('userProfile'))
-
-
+        const responseData = await response.json();
+        localStorage.setItem('userProfile', JSON.stringify(responseData.value));
     } else {
         throw new Error('Произошла ошибка при выполнении запроса.');
     }
@@ -49,9 +41,9 @@ async function setUserProfileData() {
 
     countryInputElement.value = userProfile.countryTitle;
     cityInputElement.value = userProfile.cityTitle;
-    descriptionElement.value = userProfile.description;
 
-    changeInstitutionElement.value = userProfile.institution.address;
+    descriptionElement.value = userProfile.description;
+    changeInstitutionElement.value = userProfile.institution.title;
 
     //Languages
     const languages = userProfile.languageTitles;
@@ -60,7 +52,7 @@ async function setUserProfileData() {
     const dropdownItemsLang = listLanguagesElement.querySelectorAll('.item');
 
     dropdownItemsLang.forEach(item => {
-        const itemText = item.querySelector("#item-ages").textContent;
+        const itemText = item.querySelector("#item-languages").textContent;
 
         if (languages.includes(itemText)) {
             item.classList.add("checked");
@@ -78,36 +70,32 @@ async function setUserProfileData() {
 
     dropdownItemsGrades.forEach(item => {
         const itemText = item.querySelector("#item-grades").textContent;
-        console.log(itemText)
         if (grades.includes(itemText)) {
             item.classList.add("checked");
             selectedGrades.push(itemText);
         }
     });
 
-    localStorage.setItem('editedLanguages', selectedGrades)
+    localStorage.setItem('editedGrades', selectedGrades)
 
     //Lessons
 
     const lessons = userProfile.disciplineTitles;
-    selectedValuesDiv.innerHTML = lessons.map(value => `<span>${value}</span>`).join(", ");
+    selectedLessonsDiv.innerHTML = lessons.map(value => `<span>${value}</span>`).join(", ");
 
     const dropdownItemsLessons = listSubjectsElement.querySelectorAll('.item');
 
     dropdownItemsLessons.forEach(item => {
         const itemText = item.querySelector("#item-lessons").textContent;
 
-        console.log(itemText)
-
         if (lessons.includes(itemText)) {
             item.classList.add("checked");
-            selectedValuesDiv.push(itemText);
+            selectedLessons.push(itemText);
         }
     });
 
-    localStorage.setItem('editedLanguages', selectedValues)
+    localStorage.setItem('editedLessons', selectedLessons)
 
 }
 
-document.addEventListener('DOMContentLoaded',  setUserProfileData);
-
+document.addEventListener('DOMContentLoaded', fetchData)

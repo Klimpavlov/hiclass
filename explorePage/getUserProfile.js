@@ -55,8 +55,6 @@ async function getUserProfile() {
         const responseData = await response.json();
         console.log(responseData);
 
-        // edit profile
-
 
         // My profile
         document.querySelector(".first-name-output").textContent = `${responseData.value.firstName}`;
@@ -88,7 +86,6 @@ async function getUserProfile() {
             tagElement.className = 'tag';
             subjectsOutput.appendChild(tagElement);
         });
-
 
         // User classes
 

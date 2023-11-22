@@ -31,13 +31,13 @@ if(editInputValueExpert === false) {
 }
 
 
-const selectBtn = document.querySelector('#select-subjects');
-const selectedValues = [];
-const selectedValuesDiv = document.querySelector("#output-subjects");
+const selectLessonsBtn = document.querySelector('#select-subjects');
+const selectedLessons = [];
+const selectedLessonsDiv = document.querySelector("#output-subjects");
 
 
-selectBtn.addEventListener("click", () => {
-    selectBtn.classList.toggle("open");
+selectLessonsBtn.addEventListener("click", () => {
+    selectLessonsBtn.classList.toggle("open");
 });
 
 
@@ -69,16 +69,16 @@ function generateItems(items) {
             item.classList.toggle("checked");
             const itemText = item.querySelector("#item-lessons").textContent;
             if (item.classList.contains("checked")) {
-                selectedValues.push(itemText);
+                selectedLessons.push(itemText);
             } else {
-                const index = selectedValues.indexOf(itemText);
+                const index = selectedLessons.indexOf(itemText);
                 if (index !== -1) {
-                    selectedValues.splice(index, 1);
+                    selectedLessons.splice(index, 1);
                 }
             }
-            selectedValuesDiv.innerHTML = selectedValues.map(value => `<span>${value}</span>`).join(", ");
+            selectedLessonsDiv.innerHTML = selectedLessons.map(value => `<span>${value}</span>`).join(", ");
 
-            localStorage.setItem('editedLessons', selectedValues)
+            localStorage.setItem('editedLessons', selectedLessons)
         });
 
     })
@@ -168,7 +168,7 @@ function generateLanguages(items) {
         return `
 
  <li class="item">
-        <span class="item-text" id="item-ages">${language.title}</span>
+        <span class="item-text" id="item-languages">${language.title}</span>
         <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
     </li>
     `;
@@ -183,7 +183,7 @@ function generateLanguages(items) {
     items.forEach(item => {
         item.addEventListener("click", () => {
             item.classList.toggle("checked");
-            const itemText = item.querySelector("#item-ages").textContent;
+            const itemText = item.querySelector("#item-languages").textContent;
             if (item.classList.contains("checked")) {
                 selectedLanguage.push(itemText);
             } else {
@@ -379,7 +379,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 
-/* render login/security page */
+/* render login&security page */
 
 let profileInfoBtn = document.querySelector('.profile-info')
 let loginAndSecurityBtn = document.querySelector('.profile-login');
