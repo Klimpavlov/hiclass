@@ -81,11 +81,12 @@ async function getUserProfile() {
         const subjectsOutput = document.querySelector('.tags');
         const subjectsArray = getSubjects.split(',');
         subjectsArray.forEach(subject => {
-            const tagElement = document.createElement('span');
+            const tagElement = document.createElement('div');
             tagElement.textContent = subject;
             tagElement.className = 'tag';
             subjectsOutput.appendChild(tagElement);
         });
+
 
         // User classes
 
@@ -112,6 +113,7 @@ async function getUserProfile() {
       </div>
     </div>
   `;
+
 
             getUserClasses.appendChild(classPreview);
         });

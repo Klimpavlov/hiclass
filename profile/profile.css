@@ -157,15 +157,15 @@
 }
 
 .tag {
-    width: 116px;
-    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100px;
     background-color: #ECEDEF;
     text-align: center;
     font-family: 'Inter', serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 35px;
     color: #0C0F12;
 }
 

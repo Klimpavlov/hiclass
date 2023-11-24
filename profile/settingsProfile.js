@@ -31,175 +31,259 @@ if(editInputValueExpert === false) {
 }
 
 
-const selectLessonsBtn = document.querySelector('#select-subjects');
-const selectedLessons = [];
-const selectedLessonsDiv = document.querySelector("#output-subjects");
+//
+// const selectLessonsBtn = document.querySelector('#select-subjects');
+// const selectedLessons = [];
+// const selectedLessonsDiv = document.querySelector("#output-subjects");
+//
+//
+// selectLessonsBtn.addEventListener("click", () => {
+//     selectLessonsBtn.classList.toggle("open");
+// });
+//
+//
+// const lessons = document.querySelector('#list-subjects');
+//
+// let subjectFilterFn = (lesson) => true;
+// generateItems(ALL_LESSONS, subjectFilterFn);
+//
+// function generateItems(items, filterFn) {
+//
+//     const html = items.filter(filterFn).map(lesson => {
+//         return `
+//
+//  <li class="item">
+//         <span class="item-text" id="item-lessons">${lesson.title}</span>
+//         <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
+//     </li>
+//     `;
+//     })
+//
+//         .join('');
+//
+//     lessons.innerHTML = html;
+//
+//
+//     items = document.querySelectorAll('.item');
+//     items.forEach(item => {
+//         item.addEventListener("click", () => {
+//             item.classList.toggle("checked");
+//             const itemText = item.querySelector("#item-lessons").textContent;
+//             if (item.classList.contains("checked")) {
+//                 selectedLessons.push(itemText);
+//             } else {
+//                 const index = selectedLessons.indexOf(itemText);
+//                 if (index !== -1) {
+//                     selectedLessons.splice(index, 1);
+//                 }
+//             }
+//             selectedLessonsDiv.innerHTML = selectedLessons.map(value => `<span>${value}</span>`).join(", ");
+//
+//             localStorage.setItem('editedLessons', selectedLessons)
+//         });
+//
+//     })
+//
+// }
+//
+//
+//
+//
+//
+//
+// const selectGradesBtn = document.querySelector('#select-grades');
+// const selectedGrades = [];
+// const selectedGradesDiv = document.querySelector("#output-grades");
+//
+//
+// selectGradesBtn.addEventListener("click", () => {
+//     selectGradesBtn.classList.toggle("open");
+// });
+//
+//
+// const grades = document.querySelector('#list-grades');
+//
+//
+// let gradesFilterFn = (grade) => true;
+// generateGrades(ALL_GRADES, gradesFilterFn);
+//
+// function generateGrades(items, filterFn) {
+//
+//     const html = items.filter(filterFn).map(grade => {
+//         return `
+//
+//  <li class="item">
+//         <span class="item-text" id="item-grades">${grade.classNum}</span>
+//         <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
+//     </li>
+//     `;
+//     })
+//
+//         .join('');
+//
+//     grades.innerHTML = html;
+//
+//
+//     // items = document.querySelectorAll('.item');
+//     // items.forEach(item => {
+//     //     item.addEventListener("click", () => {
+//     //         item.classList.toggle("checked");
+//     //         const itemText = item.querySelector("#item-grades").textContent;
+//     //         if (item.classList.contains("checked")) {
+//     //             selectedGrades.push(itemText);
+//     //         } else {
+//     //             const index = selectedGrades.indexOf(itemText);
+//     //             if (index !== -1) {
+//     //                 selectedGrades.splice(index, 1);
+//     //             }
+//     //         }
+//     //         selectedGradesDiv.innerHTML = selectedGrades.map(value => `<span>${value}</span>`).join(", ");
+//     //
+//     //         localStorage.setItem('editedGrades', selectedGrades)
+//     //     });
+//     //
+//     // })
+//
+//     items = document.querySelectorAll('.item');
+//     items.forEach(item => {
+//         item.addEventListener("click", () => {
+//             const checked = item.getAttribute("data-checked") === "true";
+//             item.setAttribute("data-checked", !checked);
+//             const itemText = item.querySelector("#item-grades").textContent;
+//
+//             if (!checked) {
+//                 selectedGrades.push(itemText);
+//             } else {
+//                 const index = selectedGrades.indexOf(itemText);
+//                 if (index !== -1) {
+//                     selectedGrades.splice(index, 1);
+//                 }
+//             }
+//             selectedGradesDiv.innerHTML = selectedGrades.map(value => `<span>${value}</span>`).join(", ");
+//
+//             localStorage.setItem('editedGrades', selectedGrades)
+//         });
+//
+//     });
+//
+// }
+//
+//
+//
+//
+// const selectLanguageBtn = document.querySelector('#select-languages');
+// const selectedLanguage = [];
+// const selectedLanguageDiv = document.querySelector("#output-languages");
+//
+//
+// selectLanguageBtn.addEventListener("click", () => {
+//     selectLanguageBtn.classList.toggle("open");
+// });
+//
+//
+// const languages = document.querySelector('#list-languages');
+//
+//
+// let languagesFilterFn = (languages) => true;
+// generateLanguages(ALL_LANGUAGES, languagesFilterFn);
+// function generateLanguages(items, filterFn) {
+//
+//     const html = items.filter(filterFn).map(language => {
+//         return `
+//
+//  <li class="item">
+//         <span class="item-text" id="item-languages">${language.title}</span>
+//         <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
+//     </li>
+//     `;
+//     })
+//
+//         .join('');
+//
+//     languages.innerHTML = html;
+//
+//
+//     items = document.querySelectorAll('.item');
+//     items.forEach(item => {
+//         item.addEventListener("click", () => {
+//             const checked = item.getAttribute("data-checked") === "true";
+//             item.setAttribute("data-checked", !checked);
+//             const itemText = item.querySelector("#item-languages").textContent;
+//
+//             if (!checked) {
+//                 selectedLanguage.push(itemText);
+//             } else {
+//                 const index = selectedLanguage.indexOf(itemText);
+//                 if (index !== -1) {
+//                     selectedLanguage.splice(index, 1);
+//                 }
+//             }
+//             selectedLanguageDiv.innerHTML = selectedLanguage.map(value => `<span>${value}</span>`).join(", ");
+//
+//             localStorage.setItem('editedLanguages', selectedLanguage)
+//         });
+//
+//     });
+//
+//
+//
+//
+// }
 
 
-selectLessonsBtn.addEventListener("click", () => {
-    selectLessonsBtn.classList.toggle("open");
-});
-
-
-const lessons = document.querySelector('#list-subjects');
-
-let filterFn = (lesson) => true;
-generateItems(ALL_LESSONS);
-
-function generateItems(items) {
-
-    const html = items.filter(filterFn).map(lesson => {
-        return `
-
- <li class="item">
-        <span class="item-text" id="item-lessons">${lesson.title}</span>
-        <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
-    </li>
-    `;
-    })
-
-        .join('');
-
-    lessons.innerHTML = html;
-
-
-    items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("checked");
-            const itemText = item.querySelector("#item-lessons").textContent;
-            if (item.classList.contains("checked")) {
-                selectedLessons.push(itemText);
-            } else {
-                const index = selectedLessons.indexOf(itemText);
-                if (index !== -1) {
-                    selectedLessons.splice(index, 1);
-                }
-            }
-            selectedLessonsDiv.innerHTML = selectedLessons.map(value => `<span>${value}</span>`).join(", ");
-
-            localStorage.setItem('editedLessons', selectedLessons)
-        });
-
-    })
-
-}
-
-
-
-
-
-
-const selectGradesBtn = document.querySelector('#select-grades');
+const selectedLanguages = [];
 const selectedGrades = [];
-const selectedGradesDiv = document.querySelector("#output-grades");
+const selectedLessons = [];
 
+function setupDropdown(dropdownId, outputId, listId, itemsArray, selectedItems) {
+    const selectBtn = document.querySelector(`#${dropdownId}`);
+    const selectedDiv = document.querySelector(`#${outputId}`);
+    const list = document.querySelector(`#${listId}`);
 
-selectGradesBtn.addEventListener("click", () => {
-    selectGradesBtn.classList.toggle("open");
-});
+    selectBtn.addEventListener("click", () => {
+        selectBtn.classList.toggle("open");
+    });
 
+    generateItems(itemsArray);
 
-const grades = document.querySelector('#list-grades');
+    function generateItems(items) {
+        const html = items.map((item) => {
+            return `
+        <li class="item">
+          <span class="item-text">${item.title || item.classNum}</span>
+          <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
+        </li>
+      `;
+        }).join('');
 
+        list.innerHTML = html;
 
-generateGrades(ALL_GRADES);
+        const listItems = list.querySelectorAll('.item');
+        listItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const checked = item.classList.toggle("checked");
+                const itemText = item.querySelector(".item-text").textContent;
 
-function generateGrades(items) {
-
-    const html = items.filter(filterFn).map(grade => {
-        return `
-
- <li class="item">
-        <span class="item-text" id="item-grades">${grade.classNum}</span>
-        <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
-    </li>
-    `;
-    })
-
-        .join('');
-
-    grades.innerHTML = html;
-
-
-    items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("checked");
-            const itemText = item.querySelector("#item-grades").textContent;
-            if (item.classList.contains("checked")) {
-                selectedGrades.push(itemText);
-            } else {
-                const index = selectedGrades.indexOf(itemText);
-                if (index !== -1) {
-                    selectedGrades.splice(index, 1);
+                if (checked) {
+                    selectedItems.push(itemText);
+                } else {
+                    const index = selectedItems.indexOf(itemText);
+                    if (index !== -1) {
+                        selectedItems.splice(index, 1);
+                    }
                 }
-            }
-            selectedGradesDiv.innerHTML = selectedGrades.map(value => `<span>${value}</span>`).join(", ");
 
-            localStorage.setItem('editedGrades', selectedGrades)
+                selectedDiv.innerHTML = selectedItems.map(value => `<span>${value}</span>`).join(", ");
+                localStorage.setItem(`edited${outputId.charAt(7).toUpperCase() + outputId.slice(8)}`, selectedItems);
+            });
         });
-
-    })
-
+    }
 }
 
+setupDropdown('select-languages', 'output-languages', 'list-languages', ALL_LANGUAGES, selectedLanguages);
+setupDropdown('select-grades', 'output-grades', 'list-grades', ALL_GRADES, selectedGrades);
+setupDropdown('select-lessons', 'output-lessons', 'list-lessons', ALL_LESSONS, selectedLessons);
 
-
-
-const selectLanguageBtn = document.querySelector('#select-languages');
-const selectedLanguage = [];
-const selectedLanguageDiv = document.querySelector("#output-languages");
-
-
-selectLanguageBtn.addEventListener("click", () => {
-    selectLanguageBtn.classList.toggle("open");
-});
-
-
-const languages = document.querySelector('#list-languages');
-
-
-generateLanguages(ALL_LANGUAGES);
-
-function generateLanguages(items) {
-
-    const html = items.filter(filterFn).map(language => {
-        return `
-
- <li class="item">
-        <span class="item-text" id="item-languages">${language.title}</span>
-        <span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span>
-    </li>
-    `;
-    })
-
-        .join('');
-
-    languages.innerHTML = html;
-
-
-    items = document.querySelectorAll('.item');
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            item.classList.toggle("checked");
-            const itemText = item.querySelector("#item-languages").textContent;
-            if (item.classList.contains("checked")) {
-                selectedLanguage.push(itemText);
-            } else {
-                const index = selectedLanguage.indexOf(itemText);
-                if (index !== -1) {
-                    selectedLanguage.splice(index, 1);
-                }
-            }
-            selectedLanguageDiv.innerHTML = selectedLanguage.map(value => `<span>${value}</span>`).join(", ");
-
-            localStorage.setItem('editedLanguages', selectedLanguage)
-        });
-
-    })
-
-}
 
 
 
@@ -413,21 +497,21 @@ loginAndSecurityBtn.addEventListener("click",  () => {
             <div class="reset">
                 <div class="input-title">Old password</div>
                 <div class="">
-                    <label><input name="institution-name" class="institution-name-input" type="text"
+                    <label><input name="institution-name" class="institution-name-input" type="password"
                                   placeholder="Enter your old password"></label>
                 </div>
             </div>
             <div class="reset">
                 <div class="input-title">New password</div>
                 <div class="">
-                    <label><input name="institution-name" class="institution-name-input" type="text"
+                    <label><input name="institution-name" class="institution-name-input" type="password"
                                  id="new-password" placeholder="At least 6 characters"></label>
                 </div>
             </div>
             <div class="reset">
                 <div class="input-title">Confirm new password</div>
                 <div class="">
-                    <label><input name="institution-name" class="institution-name-input" type="text"
+                    <label><input name="institution-name" class="institution-name-input" type="password"
                                   placeholder="Re-enter new password"></label>
                 </div>
             </div>
